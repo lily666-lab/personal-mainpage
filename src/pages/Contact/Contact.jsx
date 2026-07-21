@@ -140,8 +140,33 @@ export default function Contact({ content }) {
             </div>
 
             <div className="contact-link-list">
-              <p>{contact.resumeLabel}</p>
-              <p>{contact.portfolioLabel}</p>
+              <div className="contact-resource-row">
+                <span className="contact-resource-label">{contact.resumeLabel}</span>
+                <div className="contact-resume-actions">
+                  {contact.resumeDownloads.map((resume) => (
+                    <a
+                      className="contact-resource-button"
+                      href={resume.href}
+                      download={resume.filename}
+                      key={resume.href}
+                    >
+                      {resume.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <div className="contact-resource-row contact-project-row">
+                <span className="contact-resource-label">{contact.portfolioLabel}</span>
+                <a
+                  className="contact-project-link"
+                  href={contact.portfolioUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {contact.portfolioUrl}
+                </a>
+              </div>
             </div>
 
             <div className="contact-closing">

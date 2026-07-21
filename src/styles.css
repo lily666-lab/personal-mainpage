@@ -2858,6 +2858,59 @@ main {
   font-size: clamp(0.98rem, 1.2vw, 1.16rem);
 }
 
+.contact-resource-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.contact-resource-label {
+  flex: 0 0 auto;
+  color: #e8e4ff;
+}
+
+.contact-resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.contact-resource-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 5px 12px 6px;
+  border: 2px solid #8f7ee8;
+  background: rgba(20, 20, 69, 0.78);
+  color: #fff8e7;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.22);
+  text-decoration: none;
+  transition: transform 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.contact-resource-button:hover,
+.contact-resource-button:focus-visible {
+  border-color: #ffd36d;
+  color: #ffd36d;
+  transform: translate(-1px, -1px);
+}
+
+.contact-project-link {
+  min-width: 0;
+  color: #ffd36d;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.contact-project-link:hover,
+.contact-project-link:focus-visible {
+  color: #ffffff;
+}
+
 .contact-closing {
   display: flex;
   align-items: center;
@@ -3708,6 +3761,12 @@ main {
 
   .contact-link-list {
     font-size: 0.98rem;
+  }
+
+  .contact-resource-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
   }
 
   .contact-closing {

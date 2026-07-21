@@ -153,8 +153,13 @@ const zhContent = {
     stage: "FINAL STAGE",
     title: "CONTACT ME",
     email: "15643516005@163.com",
-    resumeLabel: "简历下载链接：先占位 后期我会补上",
-    portfolioLabel: "AI作品网站：先占位 后期我会补上",
+    resumeLabel: "简历下载：",
+    resumeDownloads: [
+      { label: "中文简历", href: "/assets/resume/CV-CN.pdf", filename: "Lily-CV-CN.pdf" },
+      { label: "英文简历", href: "/assets/resume/CV-EN.pdf", filename: "Lily-CV-EN.pdf" },
+    ],
+    portfolioLabel: "AI作品网站：",
+    portfolioUrl: "https://lilys-insight.streamlit.app/",
     closing: "Let's build the future, together.",
   },
 };
@@ -314,8 +319,13 @@ const enContent = {
     stage: "FINAL STAGE",
     title: "CONTACT ME",
     email: "15643516005@163.com",
-    resumeLabel: "Resume download link: placeholder for now",
-    portfolioLabel: "AI project site: placeholder for now",
+    resumeLabel: "Resume:",
+    resumeDownloads: [
+      { label: "Chinese CV", href: "/assets/resume/CV-CN.pdf", filename: "Lily-CV-CN.pdf" },
+      { label: "English CV", href: "/assets/resume/CV-EN.pdf", filename: "Lily-CV-EN.pdf" },
+    ],
+    portfolioLabel: "AI projects:",
+    portfolioUrl: "https://lilys-insight.streamlit.app/",
     closing: "Let's build the future, together.",
   },
 };
