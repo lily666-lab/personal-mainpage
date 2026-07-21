@@ -27,10 +27,10 @@ const zhContent = {
         subtitle: "AI 审计助手",
         cardImage: "/assets/portfolio/page2_project/project_card_yellow.png",
         keywords: ["审计研究", "RAG", "工作流辅助"],
-        summary: "面向审计人员的 AI 辅助审计工具。",
+        summary: "面向审计人员的 AI 辅助审计工作流平台。",
         detail:
-          "项目背景：基于真实的审计实操痛点设计，如新人上手难、底稿编制繁琐、经验严重依赖人工带教，独立构思并开发的一款将业务经验转化为 AI 辅助填写的自动化工作流。\n\n产品设计与开发：规划并落地工作台总览、自动化审计工作台、抽凭中心、RAG 知识库、项目管理等 8 大核心模块。前端采用 HTML/CSS/JS 构建包含状态记忆与复杂表单管理的完整交互；后端基于 Node.js 搭建本地服务，接入 DeepSeek API 并实现本地化数据解析与导出。\n\n项目成果：完成 AI 审计助手 AuditMind MVP 原型设计与开发，跑通“资料上传 → AI 辅助分析与抽样 → 审计底稿初稿生成 → Excel 导出”的端到端工作流闭环。搭建基于 RAG 的审计知识库问答模块，实现审计准则与业务经验知识的检索增强，为审计人员提供智能化辅助支持。",
-        tags: ["HTML", "CSS", "JavaScript", "Node.js", "DeepSeek API", "RAG"],
+          "项目背景：基于真实审计实务场景，针对新人上手难、底稿编制重复、业务经验依赖人工带教等问题，独立完成需求分析、产品设计与 MVP 搭建，探索将审计规则、知识资料和底稿模板转化为可执行的 AI 辅助工作流。\n\n产品设计与开发：规划工作台总览、项目管理、RAG 知识库、审计工作台、抽凭中心、模板管理、函证中心和合规配置等 8 个模块，并完成货币资金审计核心流程。前端使用 HTML、CSS 和 JavaScript 实现复杂表单交互与状态记忆；后端使用 Node.js 搭建本地服务，接入 DeepSeek API，实现本地知识检索、Excel 资料解析、规则辅助检查和底稿副本导出。\n\nAI 与风控设计：搭建轻量级本地 RAG 知识库，系统先检索审计准则、底稿规则和业务资料，再由大模型基于命中依据整理回答。资料不足时明确提示缺口，所有 AI 输出保留引用来源与人工复核环节，公开展示版不暴露 API Key，也不处理真实审计资料。\n\n项目成果：完成 AuditMind MVP 原型，跑通“资料上传 → 本地解析与规则检查 → 辅助抽凭 → 底稿初稿生成 → 人工复核 → Excel 副本导出”的端到端流程，验证 AI 与审计工作流结合的产品方案。",
+        tags: ["HTML", "CSS", "JavaScript", "Node.js", "DeepSeek API", "Local RAG", "Excel Parsing", "Prompt Engineering"],
       },
       {
         id: "youtube-analysis",
@@ -39,11 +39,10 @@ const zhContent = {
         subtitle: "海外内容研究工具",
         cardImage: "/assets/portfolio/page2_project/project_card_red.png",
         keywords: ["Data API", "数据分析", "竞品洞察"],
-        summary:
-          "基于 Python（Streamlit + Pandas）结合 YouTube Data API 开发，实现频道/视频维度的数据采集与筛选，自动获取视频元数据、字幕等信息，并通过可视化分析与数据导出，辅助海外内容竞品研究流程自动化。",
+        summary: "面向海外内容竞品研究场景，基于 Python、Streamlit 和 Pandas 开发，并接入 YouTube Data API 与字幕接口。",
         detail:
-          "围绕海外内容竞品研究场景，设计并实现频道/视频维度的数据采集、筛选、字幕获取、可视化分析与数据导出流程。\n\n该工具用于减少手动整理竞品内容的重复劳动，帮助快速识别频道内容方向、视频表现、选题特征与素材线索。",
-        tags: ["Python", "Streamlit", "Pandas", "YouTube Data API"],
+          "支持单视频和频道视频列表两种分析方式，可自动获取并整理视频标题、描述、标签、发布时间、播放量、点赞量、时长、封面及字幕等信息；提供日期、视频类型和播放量级别筛选，以及播放趋势展示、视频详情浏览和 Excel 导出。\n\n该工具减少了人工收集和整理竞品内容的重复工作，辅助内容团队进行视频表现对比、选题研究和素材线索整理。",
+        tags: ["Python", "Streamlit", "Pandas", "YouTube Data API", "YouTube Transcript API"],
       },
       {
         id: "reddit-insight",
@@ -52,11 +51,10 @@ const zhContent = {
         subtitle: "海外用户研究工具",
         cardImage: "/assets/portfolio/page2_project/project_card_purple.png",
         keywords: ["Playwright", "数据采集", "用户痛点分析"],
-        summary:
-          "针对海外市场用户研究场景，基于 Python + Playwright 开发自动化数据采集工具，实现指定社区帖子、评论及互动数据的自动获取与整理。",
+        summary: "面向海外市场用户研究场景，基于 Python 和 Playwright 开发 Reddit 公开内容采集工具。",
         detail:
-          "通过浏览器自动化方案解决 API 访问限制问题，支持关键词检索、内容提取及用户痛点素材沉淀，为产品调研、竞品分析和市场洞察提供数据支持。",
-        tags: ["Python", "Playwright", "Web Scraping", "User Research"],
+          "工具采用浏览器自动化方式访问公开社区页面，无需依赖 Reddit API；支持输入 Subreddit 或 Reddit 链接，按照 New、Hot、Top、Rising 排序，设置时间范围和采集数量，自动完成页面翻页、帖子去重和数据整理。\n\n可采集帖子标题、正文摘要、分数、发布时间、链接及来源域名，并以卡片、表格和 CSV 形式展示或导出，为产品调研、用户需求研究和市场洞察提供原始素材。",
+        tags: ["Python", "Playwright", "Streamlit", "Web Scraping", "User Research"],
       },
       {
         id: "wangcai-todo",
@@ -65,10 +63,10 @@ const zhContent = {
         subtitle: "个人任务管理工具",
         cardImage: "/assets/portfolio/page2_project/project_card_green.png",
         keywords: ["任务管理", "交互设计", "本地存储"],
-        summary: "针对个人任务管理场景，设计并开发一款轻量化 Todo 应用，探索任务管理流程与交互体验优化。",
+        summary: "一款以宠物陪伴和正向反馈为特色的轻量任务管理 Web App。",
         detail:
-          "支持任务新增、编辑、完成、删除、撤销、置顶及拖拽排序。\n\n通过本地存储实现数据持久化，让个人任务管理流程更轻量、更顺手。",
-        tags: ["React", "Local Storage", "UX Design"],
+          "支持任务新增、编辑、完成、删除、撤销、重要标记、分类筛选与拖拽排序。将完成任务设计为“旺财吃掉任务”的互动过程，并通过进度、鼓励文案和庆祝动效，降低传统待办工具带来的压力感。\n\n采用浏览器本地存储保存任务，无需注册登录，刷新页面后数据仍然保留。",
+        tags: ["React", "Vite", "Tailwind CSS", "Framer Motion", "LocalStorage"],
       },
       {
         id: "miaow-note",
@@ -77,11 +75,10 @@ const zhContent = {
         subtitle: "个人灵感记录工具",
         cardImage: "/assets/portfolio/page2_project/project_card_pink.png",
         keywords: ["笔记系统", "时间线", "瀑布流"],
-        summary:
-          "探索轻量化个人记录场景，设计并开发一款本地优先的笔记 Web App，用于快速记录、整理和回顾日常想法与灵感。",
+        summary: "一款面向日常想法和内容灵感的本地优先笔记 Web App。",
         detail:
-          "支持笔记创建、编辑、删除、时间线浏览及瀑布流展示。\n\n通过视觉化设计提升记录与回顾体验，让想法可以更轻松地被收集、整理和重新发现。",
-        tags: ["Web App", "Note System", "Interaction Design"],
+          "支持笔记创建、编辑、删除、分类、标签提取、关键词搜索、收藏置顶和状态管理，并可将笔记导出为 Markdown 文件。通过猫咪主题、卡片式布局和灵感追问，降低记录成本，帮助用户重新发现零散想法。\n\n采用浏览器本地存储保存笔记，无需账号和后端服务，适合快速、私密地记录个人灵感。",
+        tags: ["React", "Vite", "Tailwind CSS", "LocalStorage", "Browser APIs"],
       },
     ],
   },
@@ -193,10 +190,10 @@ const enContent = {
         subtitle: "AI Audit Assistant",
         cardImage: "/assets/portfolio/page2_project/project_card_yellow.png",
         keywords: ["Audit Research", "RAG", "Workflow Support"],
-        summary: "An AI-assisted audit tool designed for auditors.",
+        summary: "An AI-assisted audit workflow platform for audit professionals.",
         detail:
-          "Project background: AuditMind was designed around real audit pain points, including the steep learning curve for junior auditors, repetitive working paper preparation, and heavy dependence on manual coaching. I independently planned and developed an automated workflow that turns audit experience into AI-assisted form filling and draft generation.\n\nProduct design and development: I planned and built 8 core modules, including a dashboard overview, automated audit workspace, sampling center, RAG knowledge base, and project management. The frontend was built with HTML/CSS/JS and supports state memory plus complex form interactions. The backend uses Node.js, integrates the DeepSeek API, and supports local data parsing and export.\n\nOutcome: I completed the MVP prototype and ran through an end-to-end workflow from document upload, AI-assisted analysis and sampling, to draft audit working paper generation and Excel export. I also built a RAG-based audit knowledge Q&A module to retrieve audit standards and business experience, providing auditors with intelligent decision support.",
-        tags: ["HTML", "CSS", "JavaScript", "Node.js", "DeepSeek API", "RAG"],
+          "Project background: Based on real audit practice, AuditMind addresses the steep learning curve for junior auditors, repetitive working paper preparation, and dependence on manual coaching. I independently completed the requirements analysis, product design, and MVP development, exploring how audit rules, reference materials, and working paper templates can become executable AI-assisted workflows.\n\nProduct design and development: I planned eight modules covering the dashboard, project management, RAG knowledge base, audit workspace, sampling center, template management, confirmation center, and compliance settings, and completed the core cash and bank audit workflow. The frontend uses HTML, CSS, and JavaScript for complex forms and state persistence. The Node.js local service integrates the DeepSeek API for local knowledge retrieval, Excel parsing, rule-assisted checks, and working paper copy export.\n\nAI and risk-control design: I built a lightweight local RAG knowledge base. The system retrieves audit standards, working paper rules, and business materials before the model organizes an answer from the matched evidence. It identifies information gaps when materials are insufficient, preserves citations and human review for every AI output, and keeps API keys and real audit data out of the public demo.\n\nOutcome: I completed the AuditMind MVP and validated an end-to-end workflow covering document upload, local parsing and rule checks, assisted sampling, working paper draft generation, human review, and Excel copy export.",
+        tags: ["HTML", "CSS", "JavaScript", "Node.js", "DeepSeek API", "Local RAG", "Excel Parsing", "Prompt Engineering"],
       },
       {
         id: "youtube-analysis",
@@ -205,11 +202,10 @@ const enContent = {
         subtitle: "Global Content Research Tool",
         cardImage: "/assets/portfolio/page2_project/project_card_red.png",
         keywords: ["Data API", "Analytics", "Competitor Insight"],
-        summary:
-          "A Python tool built with Streamlit and Pandas, integrated with the YouTube Data API to collect and filter channel/video data, retrieve metadata and captions, visualize insights, and export research data for overseas content analysis.",
+        summary: "Built for global competitor content research with Python, Streamlit, and Pandas, integrating the YouTube Data API and transcript interface.",
         detail:
-          "Designed for global content competitor research, this tool supports channel and video level data collection, filtering, caption retrieval, visual analysis, and data export.\n\nIt reduces repetitive manual research work and helps identify content direction, video performance, topic patterns, and creative material clues more quickly.",
-        tags: ["Python", "Streamlit", "Pandas", "YouTube Data API"],
+          "It supports both individual-video analysis and channel video lists, automatically collecting and organizing titles, descriptions, tags, publish dates, views, likes, duration, thumbnails, and transcripts. It also provides filters for date, video type, and view range, plus trend visualization, video detail browsing, and Excel export.\n\nThe tool reduces repetitive competitor-data collection and helps content teams compare video performance, research topics, and organize creative leads.",
+        tags: ["Python", "Streamlit", "Pandas", "YouTube Data API", "YouTube Transcript API"],
       },
       {
         id: "reddit-insight",
@@ -218,11 +214,10 @@ const enContent = {
         subtitle: "Global User Research Tool",
         cardImage: "/assets/portfolio/page2_project/project_card_purple.png",
         keywords: ["Playwright", "Data Collection", "Pain Point Analysis"],
-        summary:
-          "An automated data collection tool built with Python and Playwright for overseas user research, supporting the collection and organization of posts, comments, and engagement data from selected communities.",
+        summary: "A Reddit public-content collection tool built with Python and Playwright for global user research.",
         detail:
-          "This tool uses browser automation to work around API access limitations. It supports keyword search, content extraction, and user pain point material collection, providing data support for product research, competitor analysis, and market insight.",
-        tags: ["Python", "Playwright", "Web Scraping", "User Research"],
+          "It uses browser automation to access public community pages without relying on the Reddit API. Users can enter a Subreddit or Reddit URL, choose New, Hot, Top, or Rising, set a time range and collection size, and automatically handle pagination, deduplication, and data organization.\n\nThe tool collects post titles, text summaries, scores, publish times, links, and source domains, then presents or exports them as cards, tables, and CSV files for product research, user-needs discovery, and market insight.",
+        tags: ["Python", "Playwright", "Streamlit", "Web Scraping", "User Research"],
       },
       {
         id: "wangcai-todo",
@@ -231,10 +226,10 @@ const enContent = {
         subtitle: "Personal Task Manager",
         cardImage: "/assets/portfolio/page2_project/project_card_green.png",
         keywords: ["Task Management", "Interaction Design", "Local Storage"],
-        summary: "A lightweight Todo app designed for personal task management, exploring smoother task workflows and interaction details.",
+        summary: "A lightweight task-management web app centered on pet companionship and positive feedback.",
         detail:
-          "Supports task creation, editing, completion, deletion, undo, pinning, and drag-and-drop sorting.\n\nLocal storage keeps data persistent, making the personal task workflow lighter and easier to use.",
-        tags: ["React", "Local Storage", "UX Design"],
+          "It supports task creation, editing, completion, deletion, undo, priority marking, category filtering, and drag-and-drop sorting. Completing a task becomes an interaction where Wangcai “eats” it, while progress indicators, encouraging messages, and celebration effects reduce the pressure associated with traditional todo tools.\n\nTasks are stored locally in the browser, so no registration is required and data remains available after refresh.",
+        tags: ["React", "Vite", "Tailwind CSS", "Framer Motion", "LocalStorage"],
       },
       {
         id: "miaow-note",
@@ -243,11 +238,10 @@ const enContent = {
         subtitle: "Personal Idea Notebook",
         cardImage: "/assets/portfolio/page2_project/project_card_pink.png",
         keywords: ["Note System", "Timeline", "Masonry Layout"],
-        summary:
-          "A local-first note-taking web app for quick idea capture, organization, and review in lightweight personal recording scenarios.",
+        summary: "A local-first note-taking web app for everyday thoughts and content inspiration.",
         detail:
-          "Supports note creation, editing, deletion, timeline browsing, and masonry-style display.\n\nThe visual design improves the experience of capturing and revisiting ideas, making everyday inspiration easier to collect, organize, and rediscover.",
-        tags: ["Web App", "Note System", "Interaction Design"],
+          "It supports note creation, editing, deletion, categories, tag extraction, keyword search, favorites, pinning, status management, and Markdown export. Its cat theme, card-based layout, and reflective prompts reduce the effort of recording ideas and help users rediscover fragmented thoughts.\n\nNotes are stored locally in the browser with no account or backend required, making the app suitable for fast and private idea capture.",
+        tags: ["React", "Vite", "Tailwind CSS", "LocalStorage", "Browser APIs"],
       },
     ],
   },
